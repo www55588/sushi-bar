@@ -23,6 +23,7 @@ body {font-family: Arial;}
 h1 {
     font-size: 32pt;
     font-family: Veranda;
+    text-shadow: 3pt 3pt 5pt darkgrey;
 }
 p {font-size: 14pt !important;}
 .picture img {width: 30%;}
@@ -77,5 +78,13 @@ table.pricelist tbody td:last-child:not(:only-child) {border: none; background-c
 table.catalog h3{
     font-family: "Caviar Dreams";
     font-size: 20pt;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    letter-spacing: 2pt;
 }
 table.catalog h3::after{content: ":";}
+table.catalog td:first-of-type::first-letter{
+    font-size: 24pt;
+    vertical-align: top;
+}
+table.catalog p::first-letter {vertical-align: top;}
