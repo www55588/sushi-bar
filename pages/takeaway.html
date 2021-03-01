@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="суші-бар, Йокагамa, суші, сашими, ролли, напої">
+        <meta name="keywords" content="суші-бар, Йокагама суші, сашими, ролли">
+        <meta name="generator" content="Visual Studio Code">
+        <title>Замовлення столика</title>
+        <link rel="stylesheet" href="../styles/2.1.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>Cуші-бар <em>&laquo;Йокагама&raquo;</em></h1>
+        </header>
+        <main>
+            <h2>Замовлення їжі на виніс</h2>
+            <form action="mailto:order.yokohama@ukr.net" method="POST" enctype="text/plain">   
+                <p>
+                    <label for="dishes">Що бажаєте замовити?</label><br>
+                    <select name="dishes" id="dishes" size="6" multiple>
+                        <optgroup label="Сашими">
+                            <option value="umagi">Умагі</option>
+                            <option value="hamachi">Хамачі</option>
+                        </optgroup>
+                        <optgroup label="Суші">
+                            <option value="chukka">Чукка</option>
+                            <option value="magura">Магуро</option>
+                            <option value="tobiko">Тобіко</option>
+                        </optgroup>
+                        <optgroup label="Ролли">
+                            <option value="kunsei_batakon">Кунсей батакон</option>
+                            <option value="arigato">Арігато</option>
+                            <option value="mexican">Мексиканський</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="phone">На який номер телефону Вам зателефонувати?</label><br>
+                    <input type="text" name="phone" id="phone" required>
+                </p>
+                <p><input type="submit"></p>
+            </form>
+        </main>
+        <footer>
+            <p>&copy; читачі книги &laquo;HTML і CSS&raquo;.<br>Всі права захищені.</p>
+        </footer>
+    </body>
+</html>
