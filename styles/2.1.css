@@ -1,17 +1,21 @@
+/* Add new font */
 @font-face{
     font-family: "Caivar Dreams";
     src: url(../fonts/CaviarDreams.ttf);
 }
+
 @font-face{
     font-family: "Caviar Dreams";
     src: url(../fonts/Caviar_Dreams_Bold.ttf);
     font-weight: bold;
 }
+
 @font-face{
     font-family: "Caivar Dreams";
     src: url(../fonts/CaviarDreams_Italic.ttf);
     font-style: italic;
 }
+
 @font-face{
     font-family: "Caviar Dreams";
     src: url(../fonts/CaviarDreams_BoldItalic.ttf);
@@ -19,43 +23,39 @@
     font-style: italic;
 }
 
-body {font-family: Arial;}
+body {
+    font-family: Arial;
+}
+
+p {
+    font-size: 14pt !important;
+}
+
+p::selection{
+    color: black; 
+    background-color: lightgrey;
+}
+
+/* HEADER Section */
+header {
+    text-align: center;
+}
+
 h1 {
     font-size: 32pt;
     font-family: Veranda;
     text-shadow: 3pt 3pt 5pt darkgrey;
 }
-p {font-size: 14pt !important;}
-.picture img {width: 30%;}
-p.greeting {font-size: 24pt;}
-h1 em {font-weight: normal;}
-div {
-    margin-left: 15pt;
-    margin-top: 5pt;
-    margin-bottom: 5pt;
-}
-header {text-align: center;}
-main {text-align: justify;}
-footer {text-align: right;}
-.bigger {font-size: 16pt;}
 
-table.catalog {border-collapse: collapse;}
-table.catalog td {
-    border-top: black thin dotted;
-    border-bottom: black thin dotted;
-    padding: 10px;
+h1 em {
+    font-weight: normal;
 }
-table.catalog img {width: 200px;}
 
-table.pricelist td, table.pricelist th {
-    border: gray thin solid;
-    padding: 4px;
+.picture img {
+    width: 30%;
 }
-table.pricelist caption {color:darkslategrey; background-color: cornflowerblue; font-size: 14pt; font-family: Arial;}
-table.pricelist thead th {color: white; background-color: gray;}
-table.pricelist tfoot {font-style: italic;}
-table.pricelist table tbody .sushi_price {color: red;}
 
+/* NAV Section */
 nav {
     float: left;
     width: 150px;
@@ -64,17 +64,46 @@ nav {
     border: black medium double;
     border-radius: 10px;
 }
+
 nav div {
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
 }
-table.catalog tr:first-child td {border-top: none;}
-table.catalog tr:last-child td {border-bottom: none;}
-table.catalog td:first-letter{font-size: 24pt;}
-p::selection{color: black; background-color: lightgrey;}
-table.pricelist tbody th[colspan]{text-align: center;}
-table.pricelist tbody td:last-child:not(:only-child) {border: none; background-color: lightgrey;}
+
+/* MAIN Section */
+main {
+    text-align: justify;
+}
+
+.bigger {
+    font-size: 16pt;
+}
+
+div {
+    margin-left: 15pt;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+}
+
+/* FOOTER Section */
+footer {
+    text-align: right;
+}
+
+p.greeting {
+    font-size: 24pt;
+}
+
+/* TABLE Catalog */
+table.catalog {
+    border-collapse: collapse;
+}
+
+table.catalog img {
+    width: 200px;
+}
+
 table.catalog h3{
     font-family: "Caviar Dreams";
     font-size: 20pt;
@@ -82,9 +111,69 @@ table.catalog h3{
     text-transform: capitalize;
     letter-spacing: 2pt;
 }
-table.catalog h3::after{content: ":";}
+
+table.catalog h3::after{
+    content: ":";
+}
+
+table.catalog tr:first-child td {
+    border-top: none;
+}
+
+table.catalog tr:last-child td {
+    border-bottom: none;
+}
+
+table.catalog td:first-letter{
+    font-size: 24pt;
+}
+
+table.catalog td {
+    border-top: black thin dotted;
+    border-bottom: black thin dotted;
+    padding: 10px;
+}
+
 table.catalog td:first-of-type::first-letter{
     font-size: 24pt;
     vertical-align: top;
 }
-table.catalog p::first-letter {vertical-align: top;}
+
+table.catalog p::first-letter {
+    vertical-align: top;
+}
+
+/* TABLE Price */
+table.pricelist td, table.pricelist th {
+    border: gray thin solid;
+    padding: 4px;
+}
+
+table.pricelist caption {
+    color:darkslategrey; 
+    background-color: cornflowerblue; 
+    font-size: 14pt; 
+    font-family: Arial;
+}
+
+table.pricelist thead th {
+    color: white; 
+    background-color: gray;
+}
+
+table.pricelist tfoot {
+    font-style: italic;
+}
+
+table.pricelist table tbody .sushi_price {
+    color: red;
+}
+
+table.pricelist tbody th[colspan]{
+    text-align: center;
+}
+
+table.pricelist tbody td:last-child:not(:only-child) {
+    border: none; 
+    background-color: lightgrey;
+}
